@@ -1,0 +1,77 @@
+{
+  "name": "daskeyboard-applet--reddit",
+  "displayName": "Reddit",
+  "version": "1.0.0",
+  "description": "Displays Reddit notifications.",
+  "longDescription": "Get a visual notification on your Das Keyboard Q series when there are Reddit news.",
+  "officialProductName": "Reddit",
+  "appUrl": "www.github.com",
+  "isSingleton": false,
+  "videoUrl": "",
+  "icon": "assets/icon.png",
+  "image": "assets/missing.png",
+  "publisher": "Das Keyboard",
+  "authorName": "Das Keyboard",
+  "authorUrl": "https://twitter.com/daskeyboard",
+  "issuesUrl": "https://github.com/metadot/daskeyboard-applet--reddit/issues",
+  "homePageUrl": "https://github.com/DasKeyboard/daskeyboard-applet--reddit",
+  "developerRepoUrl": "https://github.com/metadot/daskeyboard-applet--reddit",
+  "license": "GPL",
+  "licenseUrl": "http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt",
+  "changelogUrl": "CHANGELOG.md",
+  "readMeUrl": "README.md",
+  "readMeEndUserUrl": "README_ENDUSER.md",
+  "engines": {
+    "das-keyboard-q": "3.1.2"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Das Keyboard",
+  "dependencies": {
+    "daskeyboard-applet": "2.11.4"
+  },
+  "qConfig": {
+    "geometry": {
+      "width": 1,
+      "height": 1
+    },
+    "authorization": {
+      "type": "oauth2"
+    },
+    "questions": [
+      {
+        "key": "userId",
+        "label": "User ID",
+        "help": "Login to your Reddit account.",
+        "supportUrl": "",
+        "required": true,
+        "placeholder": "e.g: 7452696",
+        "order": 1,
+        "controlType": "textbox"
+      },
+      {
+        "key": "color",
+        "label": "Choose the color of the reminder",
+        "help": "",
+        "required": true,
+        "order": 2,
+        "value": "#FFFF00",
+        "controlType": "color"
+      },
+      {
+        "key": "effect",
+        "label": "Choose the effect of the reminder",
+        "help": "",
+        "required": true,
+        "order": 3,
+        "value": "BLINK",
+        "controlType": "effect"
+      }
+    ]
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  }
+}
